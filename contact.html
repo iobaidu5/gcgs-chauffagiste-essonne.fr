@@ -37,12 +37,15 @@
 </script>
 
 </head>
+
+
+</script>
   <body>
     <section class="Navbar navbar-main fixedNav">
     <nav class="navbar Navbar_main navbar-expand-lg fixedNav">
         <div class="container-fluid">
             <div class="Navbar_image">
-                <a href="./index.html "><img src="./assets/img/logo.png" class="Navbar_image-img"
+                <a href="./index.html"><img src="./assets/img/logo.png" class="Navbar_image-img"
                         alt="" /></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -52,7 +55,7 @@
             <div class="collapse navbar-collapse Navbar_nav-collapse" id="navbarNav">
                 <ul class="navbar-nav Navbar_nav ml-auto">
                     <li class="nav-item Navbar_nav-item">
-                        <a class="nav-link Navbar_nav-link" href="./index.html "> Accueil</a>
+                        <a class="nav-link Navbar_nav-link" href="./index.html"> Accueil</a>
                     </li>
                     <li class="nav-item dropdown Navbar_nav-item">
                         <a class="nav-link Navbar_nav-link dropdown-toggle  d-flex align-items-center" href="#"
@@ -61,21 +64,24 @@
                             Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item Navbar_nav-link" href="./chaudiere.html ">Chaudière</a>
-                            <hr class="Navbar_nav-line">
-                            <a class="dropdown-item Navbar_nav-link" href="./salle-de-bain.html ">
-                                Salle de bain</a>
-                                <hr class="Navbar_nav-line">
-                            <a class="dropdown-item Navbar_nav-link" href="./pompe-a-chaleur.html ">
+                            <a class="dropdown-item Navbar_nav-link" href="./pompe-a-chaleur.html">
                                 Pompe à chaleur</a>
                                 <hr class="Navbar_nav-line">
-                            <a class="dropdown-item Navbar_nav-link" href="./chauffage-plomberie-sanitare.html ">Chauffage - Plomberie - Sanitaire</a>
+                            <a class="dropdown-item Navbar_nav-link" href="./chaudiere.html">Chaudière</a>
                             <hr class="Navbar_nav-line">
-                            <a class="dropdown-item Navbar_nav-link" href="./racordement-de-gaz-naturel.html ">
+                            <a class="dropdown-item Navbar_nav-link" href="">
+                                Contrat d’entretien chaudière et PAC</a>
+                                <hr class="Navbar_nav-line">
+                            <a class="dropdown-item Navbar_nav-link" href="./salle-de-bain.html">
+                                Salle de bain</a>
+                                <hr class="Navbar_nav-line">
+                            <a class="dropdown-item Navbar_nav-link" href="./chauffage-plomberie-sanitare.html">Chauffage - Plomberie - Sanitaire</a>
+                            <hr class="Navbar_nav-line">
+                            <a class="dropdown-item Navbar_nav-link" href="./racordement-de-gaz-naturel.html">
                                 Raccordement gaz naturel</a>
                                 <hr class="Navbar_nav-line">
-                            <a class="dropdown-item Navbar_nav-link" href="./depannage-urgent.html ">
-                                DÉPANNAGE URGENT</a>
+                            <a class="dropdown-item Navbar_nav-link" href="./depannage-urgent.html">
+                                Dépannage urgent</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown Navbar_nav-item">
@@ -85,31 +91,41 @@
                             TARIFS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item Navbar_nav-link" href="./tarifs-particuliers.html ">Tarifs particuliers</a>
+                            <a class="dropdown-item Navbar_nav-link" href="./tarifs-particuliers.html">Tarifs particuliers</a>
                             <hr class="Navbar_nav-line">
-                            <a class="dropdown-item Navbar_nav-link" href="./tarifs-professionnels.html ">
+                            <a class="dropdown-item Navbar_nav-link" href="./tarifs-professionnels.html">
                                 Tarifs professionnels</a>
                         </div>
                     </li>
                     <li class="nav-item Navbar_nav-item">
-                        <a class="nav-link Navbar_nav-link" href="./zones-d-intervention.html ">
+                        <a class="nav-link Navbar_nav-link" href="./zones-d-intervention.html">
                             ZONES D’INTERVENTIONS</a>
                     </li>
                     <li class="nav-item Navbar_nav-item">
-                        <a class="nav-link Navbar_nav-link" href="./qui-sommes-nous.html ">
+                        <a class="nav-link Navbar_nav-link" href="./qui-sommes-nous.html">
                             QUI SOMMES-NOUS ?</a>
                     </li>
                     <li class="nav-item Navbar_nav-item">
-                        <a class="nav-link Navbar_nav-link" href="./nos-realisations.html ">NOS RÉALISATIONS</a>
+                        <a class="nav-link Navbar_nav-link" href="./nos-realisations.html">NOS RÉALISATIONS</a>
                     </li>
                     <li class="nav-item Navbar_nav-item">
-                        <a class="nav-link Navbar_nav-btn" href="./devis.html ">Devis gratuit</a>
+                        <a class="nav-link Navbar_nav-btn" href="./devis.html">Devis gratuit</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-</section> 
+</section>
+
+<script>
+    $(document).ready(function () {
+    $("li.active").removeClass("active");
+    $('a[href="' + location.pathname + '"]')
+      .closest("li")
+      .addClass("active");
+});
+
+</script>
 
     
 
@@ -120,7 +136,7 @@
     <input type="hidden" name="lang" value="fr">
     <input type="hidden" name="type" value="contact">
     <input type="hidden" name="website" value="">
-    <input type="hidden" name="redirectUrl" value="http://localhost:4000./formulaire-succes.html ">
+    <input type="hidden" name="redirectUrl" value="http://localhost:4000/message-envoye">
     <div class="row">
         <div class="col-6">
             <div class="row">
@@ -155,7 +171,7 @@
     <footer class="footer">
     <div class="container-fluid">
         <div class="footer_logo">
-            <a href="./index.html "><img src="./assets/img/logo.png" class="footer_logo-img" alt="" /></a>
+            <a href="./index.html"><img src="./assets/img/logo.png" class="footer_logo-img" alt="" /></a>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-4">
@@ -177,8 +193,11 @@
                                 class="footer_content-li--link">secretariat@gcgs91.com</a>
                         </li>
                         <li class="footer_content-li">
-                                                        Showroom: 18 rue Edouard Branly <br>
-                                                        <div class="text-center">91120 Palaiseau</div>
+                            <div class="d-flex footer_content-li">
+                                <span class="footer_content-li">Showroom: </span> &nbsp;&nbsp;
+                                <span class="footer_content-li"> 18 rue Edouard Branly<br>91120 Palaiseau</span>
+                            </div>
+        
                         </li>
                     </ul>
                 </div>
@@ -188,22 +207,22 @@
                     <h3 class="footer_content-title">Liens utiles</h3>
                     <ul class="footer_content-ul">
                         <li class="footer_content-li">
-                            <a href="./index.html " class="footer_content-li--link">ACCUEIL</a>
+                            <a href="./index.html" class="footer_content-li--link">ACCUEIL</a>
                         </li>
                         <li class="footer_content-li">
-                            <a href="./chaudiere.html " class="footer_content-li--link">SERVICES</a>
+                            <a href="./chaudiere.html" class="footer_content-li--link">SERVICES</a>
                         </li>
                         <li class="footer_content-li">
-                            <a href="./tarifs-particuliers.html " class="footer_content-li--link">TARIFS</a>
+                            <a href="./tarifs-particuliers.html" class="footer_content-li--link">TARIFS</a>
                         </li>
                         <li class="footer_content-li">
-                            <a href="./zones-d-intervention.html " class="footer_content-li--link">ZONES D’INTERVENTION</a>
+                            <a href="./zones-d-intervention.html" class="footer_content-li--link">ZONES D’INTERVENTION</a>
                         </li>
                         <li class="footer_content-li">
-                            <a href="./nos-realisations.html " class="footer_content-li--link">NOS RÉALISATIONS</a>
+                            <a href="./nos-realisations.html" class="footer_content-li--link">NOS RÉALISATIONS</a>
                         </li>
                         <li class="footer_content-li">
-                            <a href="./pompe-a-chaleur-92.html " class="footer_content-li--link">Pompe à chaleur 92</a>
+                            <a href="./pompe-a-chaleur-92.html" class="footer_content-li--link">Pompe à chaleur 92</a>
                         </li>
                     </ul>
                 </div>
@@ -235,13 +254,14 @@
             </div>
         </div>
         <div class="d-flex justify-content-center align-items-center menu_button">
-            <a class="nav-link Navbar_nav-btn" href="./contact.html ">Contactez-nous</a>
+            <a class="nav-link Navbar_nav-btn" href="./devis.html
+">Contactez-nous</a>
         </div>
     </div>
     <div class="footer_bottom d-flex justify-content-center pt-5">
         <a href="http://bhinternet.fr/" target="_blank" class="footer_content-li--link text-center">BHInternet - Creation site
             internet | 2022 | </a>
-        <a href="./mentionsLegales.html " class="footer_content-li--link text-center">&nbsp;Mentions legales</a>
+        <a href="./mentions-legales.html" class="footer_content-li--link text-center">&nbsp;Mentions legales</a>
     </div>
 </footer>
 
